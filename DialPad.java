@@ -1,12 +1,11 @@
 import java.util.*;
 
-Public class DialPad {
+public class DialPad {
     static String[] map = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
     public List<String> letterCombinations(String ques) {
-		List<String> ll = new ArrayList<>();
       List<String> ll = new ArrayList<>();
       if (ques.isEmpty()) return ll;
-      KeyPad(ques, new StringBuilder(), 0, ll);
+      KeyPad(ques, "", 0, ll);
       return ll;   
 	}
 	public void KeyPad(String ques, String ans,int i, List<String> ll) {
